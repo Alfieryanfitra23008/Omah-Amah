@@ -1,0 +1,781 @@
+
+/* ==============================
+   HALAMAN KAMAR DAN FASILITAS
+============================== */
+
+.rooms-page-content {
+    padding: 30px 32px 45px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Hero */
+
+.rooms-hero {
+    margin-bottom: 38px;
+}
+
+.rooms-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #3974ad;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.rooms-hero h2 {
+    margin: 0 0 12px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.rooms-hero p {
+    max-width: 650px;
+    margin: 0;
+    color: #858d87;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Heading pilihan kamar */
+
+.room-options-section {
+    margin-bottom: 25px;
+}
+
+.room-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.room-section-heading h3 {
+    margin: 0 0 8px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.room-section-heading p {
+    margin: 0;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.room-count {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 12px;
+    border: 1px solid #e5e9e5;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #65746a;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Grid card kamar */
+
+.room-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 21px;
+    align-items: stretch;
+}
+
+.room-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e7ebe6;
+    border-radius: 17px;
+    background: #ffffff;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-4px);
+    border-color: #d6e4d8;
+    box-shadow: 0 12px 28px rgba(29, 55, 36, 0.07);
+}
+
+/* Foto kamar */
+
+.room-image-wrapper {
+    position: relative;
+    height: 205px;
+    overflow: hidden;
+    background: #edf0ec;
+}
+
+.room-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.room-card:hover .room-image {
+    transform: scale(1.04);
+}
+
+.room-type-badge {
+    position: absolute;
+    bottom: 13px;
+    left: 13px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #426b50;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+/* Isi card */
+
+.room-card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.room-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.room-title-row h4 {
+    margin: 0;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.room-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: #7d887f;
+    font-size: 9px;
+}
+
+.room-status span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #b8c2ba;
+}
+
+/* Harga */
+
+.room-price {
+    margin-top: 11px;
+    color: #3974ad;
+    font-size: 12px;
+}
+
+.room-price strong {
+    font-weight: 800;
+}
+
+/* Deskripsi */
+
+.room-description {
+    min-height: 65px;
+    margin: 12px 0 17px;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+/* Label fasilitas horizontal */
+
+.room-facilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 21px;
+}
+
+.room-facilities span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 9px;
+    border: 1px solid #e8ede7;
+    border-radius: 8px;
+    background: #f9faf8;
+    color: #68766c;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.room-facilities i {
+    color: #426b50;
+    font-size: 12px;
+}
+
+/* Tombol detail */
+
+.room-detail-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    padding: 12px 15px;
+    border: 1px solid #1B3D63;
+    border-radius: 10px;
+    background: #1B3D63;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.room-detail-button:hover {
+    transform: translateY(-1px);
+    background: #34563f;
+    color: #ffffff;
+}
+
+.room-detail-button i {
+    transition: transform 0.2s ease;
+}
+
+.room-detail-button:hover i {
+    transform: translateX(3px);
+}
+
+/* Catatan */
+
+.room-disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 15px 17px;
+    border: 1px solid #e8ede7;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.room-disclaimer > i {
+    margin-top: 2px;
+    color: #3974ad;
+    font-size: 15px;
+}
+
+.room-disclaimer p {
+    margin: 0;
+    color: #858d87;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+    .rooms-page-content {
+        padding: 26px 24px 40px;
+    }
+
+    .room-cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .room-image-wrapper {
+        height: 210px;
+    }
+}
+
+/* HP */
+
+@media (max-width: 600px) {
+    .rooms-page-content {
+        padding: 23px 16px 32px;
+    }
+
+    .rooms-hero {
+        margin-bottom: 30px;
+    }
+
+    .rooms-hero h2 {
+        font-size: 25px;
+    }
+
+    .rooms-hero p {
+        font-size: 12px;
+    }
+
+    .room-section-heading {
+        align-items: flex-start;
+    }
+
+    .room-section-heading h3 {
+        font-size: 18px;
+    }
+
+    .room-count {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .room-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .room-image-wrapper {
+        height: 220px;
+    }
+
+    .room-card-body {
+        padding: 18px;
+    }
+
+    .room-description {
+        min-height: auto;
+    }
+}
+
+
+
+/* ==================================
+   SECTION FASILITAS SESUAI KEBUTUHAN
+================================== */
+
+.room-facilities-section {
+    margin-top: 52px;
+    margin-bottom: 35px;
+}
+
+.room-facilities-heading {
+    margin-bottom: 25px;
+}
+
+.room-facilities-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #3974ad;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.room-facilities-heading h2 {
+    margin: 0 0 11px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.room-facilities-heading > p {
+    max-width: 650px;
+    margin: 0;
+    color: #858d87;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Tiga card horizontal */
+
+.room-facilities-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 20px;
+}
+
+.room-facility-category {
+    min-width: 0;
+    padding: 25px 23px;
+    border: 1px solid #e7ebe6;
+    border-radius: 17px;
+    background: #ffffff;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.room-facility-category:hover {
+    transform: translateY(-3px);
+    border-color: #d6e4d8;
+    box-shadow: 0 10px 24px rgba(29, 55, 36, 0.05);
+}
+
+/* Ikon utama setiap card */
+
+.room-facility-category-icon {
+    display: flex;
+    width: 49px;
+    height: 49px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+    border-radius: 14px;
+    font-size: 21px;
+}
+
+.icon-bedroom {
+    background: #eaf4ec;
+    color: #426b50;
+}
+
+.icon-shared {
+    background: #eaf2fb;
+    color: #3974ad;
+}
+
+.icon-extra {
+    background: #f3edfb;
+    color: #8965bd;
+}
+
+/* Judul dan deskripsi */
+
+.room-facility-category h3 {
+    margin: 0 0 9px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.room-facility-category-description {
+    min-height: 67px;
+    margin: 0 0 20px;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* List fasilitas dengan ikon */
+
+.room-facility-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding-top: 17px;
+    border-top: 1px solid #eef1ed;
+}
+
+.room-facility-list-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #657168;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.room-facility-list-icon {
+    display: flex;
+    width: 29px;
+    height: 29px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #f5f7f4;
+    color: #426b50;
+    font-size: 14px;
+}
+
+/* Warna ikon list */
+
+.room-facility-category:nth-child(2)
+.room-facility-list-icon {
+    background: #f0f5fb;
+    color: #3974ad;
+}
+
+.room-facility-category:nth-child(3)
+.room-facility-list-icon {
+    background: #f5f0fb;
+    color: #8965bd;
+}
+
+/* Catatan fasilitas */
+
+.room-facilities-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 14px 16px;
+    border: 1px solid #e7ebe6;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.room-facilities-note > i {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #3974ad;
+    font-size: 14px;
+}
+
+.room-facilities-note p {
+    margin: 0;
+    color: #858d87;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .room-facilities-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px;
+    }
+
+    .room-facility-category-description {
+        min-height: auto;
+    }
+}
+
+/* HP */
+
+@media (max-width: 600px) {
+    .room-facilities-section {
+        margin-top: 38px;
+    }
+
+    .room-facilities-heading h2 {
+        font-size: 22px;
+    }
+
+    .room-facilities-heading > p {
+        font-size: 12px;
+    }
+
+    .room-facilities-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .room-facility-category {
+        padding: 22px 20px;
+    }
+
+    .room-facility-category-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 15px;
+        font-size: 19px;
+    }
+
+    .room-facility-category-description {
+        margin-bottom: 17px;
+    }
+}
+
+
+/* ==================================
+   CTA TANYA AMAH AI
+================================== */
+
+.rooms-ai-cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    padding: 36px 40px;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #eaf2fb 0%, #dceafb 100%);
+    border: 1px solid #d8e6f7;
+}
+
+.rooms-ai-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.rooms-ai-cta-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 12px;
+    color: #3974ad;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.rooms-ai-cta-content h2 {
+    margin: 0 0 12px;
+    color: #243b56;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    line-height: 1.4;
+}
+
+.rooms-ai-cta-content p {
+    max-width: 590px;
+    margin: 0 0 23px;
+    color: #77879a;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.rooms-ai-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 19px;
+    border-radius: 11px;
+    background: #3974ad;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 5px 12px rgba(57, 116, 173, 0.15);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.rooms-ai-cta-button:hover {
+    background: #2e6295;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.rooms-ai-cta-decoration {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    width: 145px;
+    height: 145px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.rooms-ai-cta-icon {
+    display: flex;
+    width: 94px;
+    height: 94px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(57, 116, 173, 0.12);
+    border-radius: 28px;
+    background: #ffffff;
+    color: #3974ad;
+    font-size: 43px;
+    transform: rotate(-7deg);
+    box-shadow: 0 12px 30px rgba(57, 116, 173, 0.1);
+}
+
+.rooms-ai-cta-sparkle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3974ad;
+}
+
+.sparkle-one {
+    top: 9px;
+    right: 10px;
+    font-size: 24px;
+}
+
+.sparkle-two {
+    bottom: 13px;
+    left: 8px;
+    font-size: 20px;
+}
+
+@media (max-width: 700px) {
+    .rooms-ai-cta {
+        padding: 28px 23px;
+        gap: 20px;
+    }
+
+    .rooms-ai-cta-content h2 {
+        font-size: 21px;
+    }
+
+    .rooms-ai-cta-content p {
+        font-size: 12px;
+    }
+
+    .rooms-ai-cta-decoration {
+        width: 90px;
+        height: 90px;
+        margin-right: 0;
+    }
+
+    .rooms-ai-cta-icon {
+        width: 62px;
+        height: 62px;
+        border-radius: 20px;
+        font-size: 29px;
+    }
+
+    .sparkle-one {
+        top: 0;
+        right: 0;
+        font-size: 17px;
+    }
+
+    .sparkle-two {
+        bottom: 3px;
+        left: 0;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rooms-ai-cta {
+        padding: 25px 20px;
+    }
+
+    .rooms-ai-cta-decoration {
+        display: none;
+    }
+
+    .rooms-ai-cta-content h2 {
+        font-size: 20px;
+    }
+
+    .rooms-ai-cta-button {
+        padding: 11px 15px;
+    }
+}

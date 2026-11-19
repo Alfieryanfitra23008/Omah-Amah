@@ -1,0 +1,696 @@
+
+/* ==================================
+   HEADER DAN GALERI DETAIL KAMAR
+================================== */
+
+.room-detail-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 27px;
+    color: #426b50;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.room-detail-back:hover {
+    color: #294c35;
+}
+
+.room-detail-heading {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.room-detail-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #3974ad;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.room-detail-heading h2 {
+    margin: 0 0 10px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.room-detail-heading p {
+    max-width: 680px;
+    margin: 0;
+    color: #858d87;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Galeri horizontal */
+.room-gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    gap: 15px;
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.room-gallery-main,
+.room-gallery-small {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #edf0eb;
+    border-radius: 14px;
+}
+
+.room-gallery-main img,
+.room-gallery-small img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.room-gallery-main:hover img,
+.room-gallery-small:hover img {
+    transform: scale(1.035);
+}
+
+/* Kolom kanan: dua baris */
+.room-gallery-side {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    min-height: 0;
+}
+
+@media (max-width: 768px) {
+    .room-detail-heading h2 {
+        font-size: 24px;
+    }
+
+    .room-gallery {
+        height: 340px;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .room-gallery-side {
+        gap: 10px;
+    }
+
+    .room-gallery-main,
+    .room-gallery-small {
+        border-radius: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .room-detail-heading p {
+        font-size: 12px;
+    }
+
+    .room-gallery {
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .room-gallery-main {
+        height: 250px;
+    }
+
+    .room-gallery-side {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: 125px;
+        gap: 10px;
+    }
+}
+
+
+
+/* ==================================
+   INFORMASI DAN SEWA KAMAR
+================================== */
+
+.room-detail-information {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 22px;
+    margin-top: 28px;
+    margin-bottom: 35px;
+    align-items: stretch;
+}
+
+.room-information-card {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid #e7ebe6;
+    border-radius: 17px;
+    background: #ffffff;
+}
+
+.room-about-card h3,
+.room-rental-card h3 {
+    margin: 0 0 15px;
+    color: #26372c;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.35px;
+    line-height: 1.6;
+}
+
+.room-about-card p {
+    margin: 0 0 13px;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.room-about-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Informasi sewa */
+.room-rental-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 12px;
+    color: #3974ad;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.room-rental-card h3 {
+    margin-bottom: 8px;
+    font-size: 23px;
+}
+
+.room-rental-description {
+    margin: 0 0 18px;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Status ketersediaan */
+.room-availability {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 20px;
+    padding: 12px 13px;
+    border: 1px solid #ece9dc;
+    border-radius: 10px;
+    background: #faf9f4;
+    color: #8a7950;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.room-availability-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #c5a65d;
+}
+
+/* Tombol AI */
+.room-ask-ai-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 13px 16px;
+    border: 0;
+    border-radius: 11px;
+    background: #3974ad;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.room-ask-ai-button:hover {
+    transform: translateY(-2px);
+    background: #2e6295;
+    color: #ffffff;
+}
+
+.room-ask-ai-button i:last-child {
+    margin-left: auto;
+}
+
+/* Catatan abu-abu di bawah tombol */
+.room-rental-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 15px 0 0;
+    color: #858d87;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.room-rental-note i {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #3974ad;
+    font-size: 13px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .room-detail-information {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 22px;
+    }
+
+    .room-information-card {
+        padding: 23px 21px;
+    }
+}
+
+@media (max-width: 480px) {
+    .room-information-card {
+        padding: 21px 18px;
+    }
+
+    .room-about-card h3,
+    .room-rental-card h3 {
+        font-size: 17px;
+    }
+}
+
+
+
+/* ==================================
+   DETAIL YANG PERLU DIKETAHUI
+================================== */
+
+.room-important-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+    align-items: start;
+    gap: 25px;
+    margin-top: 42px;
+    margin-bottom: 40px;
+}
+
+.room-important-heading {
+    margin-bottom: 22px;
+}
+
+.room-important-heading h3 {
+    margin: 0 0 9px;
+    color: #26372c;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.5;
+}
+
+.room-important-heading p {
+    max-width: 550px;
+    margin: 0;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Grid 2 x 2 */
+.room-important-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.room-important-card {
+    min-width: 0;
+    padding: 21px;
+    border: 1px solid #e7ebe6;
+    border-radius: 15px;
+    background: #ffffff;
+    transition: border-color .25s ease, box-shadow .25s ease,
+                transform .25s ease;
+}
+
+.room-important-card:hover {
+    transform: translateY(-3px);
+    border-color: #d6e4d8;
+    box-shadow: 0 8px 22px rgba(29, 55, 36, 0.04);
+}
+
+.room-important-icon {
+    display: flex;
+    width: 43px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 17px;
+    border-radius: 12px;
+    background: #eaf4ec;
+    color: #426b50;
+    font-size: 19px;
+}
+
+.room-important-icon.blue {
+    background: #eaf2fb;
+    color: #3974ad;
+}
+
+.room-important-icon.purple {
+    background: #f3edfb;
+    color: #8965bd;
+}
+
+.room-important-icon.orange {
+    background: #fff2e5;
+    color: #c18442;
+}
+
+.room-important-card h4 {
+    margin: 0 0 9px;
+    color: #26372c;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.room-important-card > p {
+    min-height: 62px;
+    margin: 0 0 15px;
+    color: #858d87;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.room-detail-pending {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: #f6f5ef;
+    color: #8a7950;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Card Hubungi Pengelola */
+.room-manager-card {
+    padding: 26px 23px;
+    border: 1px solid #e7ebe6;
+    border-radius: 17px;
+    background: #ffffff;
+}
+
+.room-manager-icon {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+    border-radius: 15px;
+    background: #eaf2fb;
+    color: #3974ad;
+    font-size: 23px;
+}
+
+.room-manager-card h3 {
+    margin: 0 0 11px;
+    color: #26372c;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.room-manager-card > p {
+    margin: 0;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.room-manager-divider {
+    height: 1px;
+    margin: 21px 0;
+    background: #edf0eb;
+}
+
+.room-manager-contact-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 19px;
+    color: #657168;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.room-manager-contact-info i {
+    margin-top: 2px;
+    color: #3974ad;
+    font-size: 15px;
+}
+
+.room-manager-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 10px;
+    background: #426b50;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.room-manager-button:hover {
+    transform: translateY(-2px);
+    background: #34563f;
+    color: #ffffff;
+}
+
+.room-manager-button i:last-child {
+    margin-left: auto;
+}
+
+.room-manager-note {
+    display: block;
+    margin-top: 14px;
+    color: #929a93;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+/* Responsif */
+@media (max-width: 1000px) {
+    .room-important-details {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .room-manager-card {
+        max-width: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .room-important-details {
+        margin-top: 32px;
+    }
+
+    .room-important-heading h3 {
+        font-size: 20px;
+    }
+
+    .room-important-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .room-important-card {
+        padding: 19px;
+    }
+
+    .room-important-card > p {
+        min-height: 0;
+    }
+
+    .room-manager-card {
+        padding: 23px 20px;
+    }
+}
+
+
+
+/* ==================================
+   SECTION FASILITAS KAMAR
+================================== */
+
+.room-detail-facilities-section {
+    margin-top: 42px;
+    margin-bottom: 40px;
+    padding: 30px;
+    border: 1px solid #e7ebe6;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.room-detail-facilities-header {
+    margin-bottom: 24px;
+}
+
+.room-detail-facilities-header h3 {
+    margin: 0 0 10px;
+    color: #26372c;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.room-detail-facilities-header p {
+    max-width: 650px;
+    margin: 0;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Daftar fasilitas */
+.room-detail-facility-items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.room-detail-facility-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+    padding: 17px;
+    border: 1px solid #edf0eb;
+    border-radius: 13px;
+    background: #fafbf9;
+    color: #344638;
+    font-size: 12px;
+    font-weight: 700;
+    transition: border-color .2s ease, background .2s ease;
+}
+
+.room-detail-facility-item:hover {
+    border-color: #d6e4d8;
+    background: #f5f9f4;
+}
+
+.room-detail-facility-item-icon {
+    display: flex;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #eaf4ec;
+    color: #426b50;
+    font-size: 19px;
+}
+
+.room-detail-facilities-description {
+    margin: 20px 0 0;
+    color: #858d87;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* Tombol lihat kamar */
+.room-detail-facilities-action {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 22px;
+}
+
+.room-detail-facilities-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 17px;
+    border: 1px solid #dce8dc;
+    border-radius: 10px;
+    background: #f2f7f2;
+    color: #426b50;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.room-detail-facilities-button:hover {
+    transform: translateY(-2px);
+    background: #e5f0e6;
+    color: #34563f;
+}
+
+.room-detail-facilities-button i:last-child {
+    margin-left: 4px;
+}
+
+/* Responsif */
+@media (max-width: 700px) {
+    .room-detail-facilities-section {
+        padding: 24px 20px;
+    }
+
+    .room-detail-facility-items {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .room-detail-facilities-header h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .room-detail-facilities-section {
+        padding: 21px 17px;
+    }
+
+    .room-detail-facility-item {
+        padding: 14px;
+    }
+
+    .room-detail-facilities-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,1947 @@
+
+/* ========================================
+   INFORMASI KOST - OMAH AMAH
+======================================== */
+
+:root {
+    --inform-primary: #1b3d63;
+    --inform-primary-dark: #1b3d63;
+    --inform-blue: #3974ad;
+    --inform-text: #24352a;
+    --inform-muted: #858d87;
+    --inform-background: #f7f8f4;
+    --inform-border: #e8ede7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    /* background: var(--inform-background); */
+    color: var(--inform-text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Konten utama */
+
+.main-content {
+    min-height: 100vh;
+    padding: 30px 36px 0;
+}
+
+/* Topbar */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 34px;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.topbar-left h1 {
+    margin: 0 0 5px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+}
+
+.topbar-left p {
+    margin: 0;
+    color: var(--inform-muted);
+    font-size: 12px;
+}
+
+/* Tombol toggle sidebar */
+
+.sidebar-toggle {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid var(--inform-border);
+    border-radius: 12px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.sidebar-toggle span {
+    display: block;
+    width: 17px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--inform-text);
+}
+
+/* Profil */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.avatar {
+    display: flex;
+    width: 43px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #e3eee5;
+    color: var(--inform-primary);
+    font-weight: 800;
+}
+
+.profile-name {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.profile-role {
+    margin-top: 3px;
+    color: var(--inform-muted);
+    font-size: 11px;
+}
+
+/* ========================================
+   HERO INFORMASI KOST
+======================================== */
+
+.kost-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+
+    padding: 32px;
+    border: 1px solid var(--inform-border);
+    border-radius: 24px;
+    background: #ffffff;
+
+    box-shadow: 0 8px 30px rgba(29, 55, 36, 0.035);
+}
+
+/* Kolom kiri */
+
+.kost-hero-left {
+    min-width: 0;
+}
+
+.kost-eyebrow {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--inform-blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.kost-hero-left h2 {
+    margin: 0 0 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(27px, 3vw, 37px);
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.kost-left-description {
+    max-width: 460px;
+    margin: 0 0 24px;
+    color: var(--inform-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Gambar rumah */
+
+.kost-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    border-radius: 20px;
+    background: #eaf0e9;
+}
+
+.kost-house-image {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.kost-image-wrapper:hover .kost-house-image {
+    transform: scale(1.04);
+}
+
+.image-caption {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+}
+
+.caption-icon {
+    display: flex;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #eaf4ec;
+    color: var(--inform-primary);
+    font-size: 20px;
+}
+
+.image-caption h4 {
+    margin: 0 0 4px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.image-caption p {
+    margin: 0;
+    color: var(--inform-muted);
+    font-size: 11px;
+}
+
+/* ========================================
+   KOLOM KANAN
+======================================== */
+
+.kost-hero-right {
+    min-width: 0;
+    padding: 8px 0;
+}
+
+.kost-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    padding: 9px 12px;
+    border-radius: 30px;
+    background: #eef6ef;
+    color: var(--inform-primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #5ca66c;
+}
+
+.kost-name {
+    margin: 0 0 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(24px, 2.5vw, 32px);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.kost-description {
+    margin: 0 0 24px;
+    color: var(--inform-muted);
+    font-size: 13px;
+    line-height: 1.95;
+}
+
+/* Alamat */
+
+.kost-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 18px;
+    padding: 18px;
+    border: 1px solid var(--inform-border);
+    border-radius: 15px;
+    background: #fcfdfb;
+}
+
+.address-icon {
+    display: flex;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #eaf2fb;
+    color: var(--inform-blue);
+    font-size: 20px;
+}
+
+.address-content {
+    min-width: 0;
+}
+
+.address-label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--inform-text);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.address-content p {
+    margin: 0;
+    color: var(--inform-muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* Catatan */
+
+.kost-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.kost-note i {
+    margin-top: 3px;
+    color: var(--inform-blue);
+    font-size: 14px;
+}
+
+.kost-note p {
+    margin: 0;
+    color: var(--inform-muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* Tombol horizontal */
+
+.kost-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-kost-primary,
+.btn-kost-secondary {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 17px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-kost-primary {
+    background: var(--inform-primary);
+    color: #ffffff;
+}
+
+.btn-kost-primary:hover {
+    background: var(--inform-primary-dark);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(66, 107, 80, 0.17);
+}
+
+.btn-kost-primary i:last-child {
+    margin-left: 5px;
+}
+
+.btn-kost-secondary {
+    border-color: #dfe8e0;
+    background: #ffffff;
+    color: var(--inform-primary);
+}
+
+.btn-kost-secondary:hover {
+    border-color: #bfd5c3;
+    background: #f2f8f3;
+    color: var(--inform-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Keunggulan */
+
+.kost-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #edf0eb;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #737e75;
+    font-size: 11px;
+}
+
+.highlight-item i {
+    color: var(--inform-primary);
+    font-size: 14px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.inform-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 25px 0;
+}
+
+.inform-footer p,
+.inform-footer span {
+    margin: 0;
+    color: #929a93;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.inform-footer span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.inform-footer span i {
+    color: #d97878;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+    .main-content {
+        padding: 25px 24px 0;
+    }
+
+    .kost-hero {
+        gap: 28px;
+        padding: 25px;
+    }
+
+    .kost-house-image {
+        height: 290px;
+    }
+
+    .kost-actions {
+        align-items: stretch;
+    }
+
+    .btn-kost-primary,
+    .btn-kost-secondary {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .kost-hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .kost-image-wrapper {
+        max-width: 100%;
+    }
+
+    .kost-house-image {
+        height: 350px;
+    }
+
+    .kost-hero-right {
+        padding: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        padding: 20px 15px 0;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        margin-bottom: 24px;
+    }
+
+    .topbar-left {
+        gap: 10px;
+    }
+
+    .topbar-left h1 {
+        font-size: 18px;
+    }
+
+    .topbar-left p {
+        max-width: 190px;
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .sidebar-toggle {
+        width: 37px;
+        height: 37px;
+        flex-shrink: 0;
+    }
+
+    .profile {
+        gap: 7px;
+    }
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 11px;
+    }
+
+    .profile-name {
+        font-size: 11px;
+    }
+
+    .profile-role {
+        max-width: 90px;
+        font-size: 9px;
+    }
+
+    .kost-hero {
+        gap: 28px;
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .kost-eyebrow {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+
+    .kost-hero-left h2 {
+        font-size: 28px;
+    }
+
+    .kost-left-description {
+        font-size: 12px;
+    }
+
+    .kost-house-image {
+        height: 250px;
+    }
+
+    .image-caption {
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        padding: 11px;
+    }
+
+    .caption-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 17px;
+    }
+
+    .image-caption h4 {
+        font-size: 11px;
+    }
+
+    .image-caption p {
+        font-size: 10px;
+    }
+
+    .kost-name {
+        font-size: 25px;
+    }
+
+    .kost-description {
+        font-size: 12px;
+    }
+
+    .kost-address {
+        padding: 14px;
+    }
+
+    .kost-actions {
+        flex-direction: column;
+    }
+
+    .btn-kost-primary,
+    .btn-kost-secondary {
+        width: 100%;
+        flex: auto;
+    }
+
+    .kost-highlights {
+        gap: 12px;
+    }
+
+    .inform-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+}
+
+
+/* ========================================
+   RUANG BERSAMA & FASILITAS UMUM
+======================================== */
+
+.public-facilities-section {
+    margin-top: 42px;
+    margin-bottom: 35px;
+}
+
+/* Heading */
+
+.public-facilities-heading {
+    margin-bottom: 24px;
+}
+
+.public-facilities-eyebrow {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: #3974ad;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.public-facilities-heading h2 {
+    margin: 0 0 10px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.public-facilities-heading p {
+    max-width: 620px;
+    margin: 0;
+    color: #858d87;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Grid fleksibel: card turun ke baris berikutnya */
+
+.public-facilities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.public-facility-card {
+    flex: 0 0 calc((100% - 36px) / 3);
+    min-width: 0;
+    padding: 24px 22px;
+    border: 1px solid #e8ede7;
+    border-radius: 17px;
+    background: #fff;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.public-facility-card:hover {
+    transform: translateY(-4px);
+    border-color: #d6e4d8;
+    box-shadow: 0 10px 25px rgba(29, 55, 36, 0.06);
+}
+
+/* Icon */
+
+.public-facility-icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+
+    border-radius: 14px;
+    font-size: 22px;
+}
+
+/* Warna masing-masing icon */
+
+.icon-wifi {
+    background: #eaf2fb;
+    color: #3974ad;
+}
+
+.icon-parking {
+    background: #eaf4ec;
+    color: #426b50;
+}
+
+.icon-security {
+    background: #f1ecfb;
+    color: #8664bf;
+}
+
+.icon-common {
+    background: #fff2e5;
+    color: #d98935;
+}
+
+.icon-laundry {
+    background: #fcecf0;
+    color: #c45c7a;
+}
+
+/* Judul dan deskripsi */
+
+.public-facility-card h3 {
+    margin: 0 0 9px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.public-facility-card p {
+    margin: 0;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+/* Catatan fasilitas */
+
+.public-facilities-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 20px;
+    color: #858d87;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.public-facilities-note i {
+    margin-top: 2px;
+    color: #3974ad;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .public-facilities-section {
+        margin-top: 34px;
+    }
+
+     .public-facilities-grid {
+        gap: 14px;
+    }
+
+    .public-facility-card {
+        flex-basis: calc((100% - 14px) / 2);
+        padding: 21px 18px;
+    }
+}
+
+/* HP */
+
+@media (max-width: 480px) {
+    .public-facilities-heading h2 {
+        font-size: 21px;
+    }
+
+    .public-facilities-heading p {
+        font-size: 12px;
+    }
+
+    .public-facilities-grid {
+        gap: 12px;
+    }
+
+     .public-facility-card {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+
+    .public-facility-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 14px;
+        font-size: 20px;
+    }
+}
+
+
+/* ==============================
+   LOKASI & AKSES SEKITAR
+============================== */
+
+.location-section {
+    margin-top: 48px;
+    margin-bottom: 40px;
+}
+
+.location-heading {
+    margin-bottom: 24px;
+}
+
+.location-eyebrow {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: #3974ad;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.location-heading h2 {
+    margin: 0 0 10px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.location-heading > p {
+    max-width: 650px;
+    margin: 0;
+    color: #858d87;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* Kedua card */
+
+.location-info-card,
+.location-map-card {
+    min-width: 0;
+    overflow: hidden;
+    padding: 26px;
+    border: 1px solid #e8ede7;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(29, 55, 36, 0.025);
+}
+
+/* Header card */
+
+.location-card-header,
+.location-map-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.location-card-header {
+    justify-content: flex-start;
+    margin-bottom: 27px;
+}
+
+.location-main-icon,
+.location-map-icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #1b3d63;
+    color: white;
+    font-size: 21px;
+}
+
+.location-map-icon {
+    background: #eaf2fb;
+    color: #3974ad;
+}
+
+.location-card-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #89918b;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.location-card-header h3,
+.location-map-header h3 {
+    margin: 0;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+/* Detail alamat dan akses */
+
+.location-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eef1ed;
+}
+
+.location-detail-icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #1b3d63;
+    color: white;
+    font-size: 17px;
+}
+
+.location-detail-content {
+    min-width: 0;
+    padding-top: 2px;
+}
+
+.location-detail-content h4 {
+    margin: 0 0 6px;
+    color: #2d3d32;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.location-detail-content p {
+    margin: 0;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Catatan */
+
+.location-info-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 19px;
+    padding: 13px;
+    border-radius: 12px;
+    background: #f5f8f4;
+    color: #7c877e;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.location-info-note i {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #426b50;
+}
+
+/* Tombol petunjuk arah */
+
+.location-direction-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 20px;
+    padding: 13px 16px;
+    border-radius: 12px;
+    background: #1b3d63;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.location-direction-button:hover {
+    transform: translateY(-2px);
+    background: #34563f;
+    color: #ffffff;
+}
+
+.location-direction-button .bi-arrow-up-right {
+    margin-left: auto;
+}
+
+/* Google Maps */
+
+.location-map-header {
+    margin-bottom: 20px;
+}
+
+.location-map-frame {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #f1f3f0;
+}
+
+.location-map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.location-map-footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 16px;
+    color: #858d87;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.location-map-footer i {
+    margin-top: 2px;
+    color: #3974ad;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .location-map-frame {
+        height: 320px;
+    }
+}
+
+/* HP */
+
+@media (max-width: 480px) {
+    .location-section {
+        margin-top: 34px;
+    }
+
+    .location-heading h2 {
+        font-size: 21px;
+    }
+
+    .location-heading > p {
+        font-size: 12px;
+    }
+
+    .location-info-card,
+    .location-map-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .location-card-header h3,
+    .location-map-header h3 {
+        font-size: 15px;
+    }
+
+    .location-map-frame {
+        height: 280px;
+    }
+}
+
+
+
+
+/* ======================================
+   PERATURAN KOST & LAYANAN DAN BANTUAN
+====================================== */
+
+.rules-services-section {
+    margin-top: 48px;
+    margin-bottom: 42px;
+}
+
+.rules-services-heading {
+    margin-bottom: 24px;
+}
+
+.rules-services-eyebrow {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: #3974ad;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.rules-services-heading h2 {
+    margin: 0 0 10px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.rules-services-heading > p {
+    max-width: 650px;
+    margin: 0;
+    color: #858d87;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Dua card utama */
+
+.rules-services-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+    gap: 22px;
+}
+
+.rules-card,
+.services-card {
+    min-width: 0;
+    padding: 26px;
+    border: 1px solid #e8ede7;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(29, 55, 36, 0.025);
+}
+
+/* Header card */
+
+.rules-card-header,
+.services-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.rules-card-icon,
+.services-card-icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #eaf4ec;
+    color: #426b50;
+    font-size: 21px;
+}
+
+.services-card-icon {
+    background: #eaf2fb;
+    color: #3974ad;
+}
+
+.rules-card-label,
+.services-card-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #89918b;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.rules-card-header h3,
+.services-card-header h3 {
+    margin: 0;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+/* Daftar peraturan */
+
+.rule-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 17px 0;
+    border-bottom: 1px solid #eef1ed;
+}
+
+.rule-number {
+    display: flex;
+    width: 37px;
+    height: 37px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #1b3d63;
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.rule-content {
+    min-width: 0;
+    padding-top: 2px;
+}
+
+.rule-content h4 {
+    margin: 0 0 7px;
+    color: #2d3d32;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.rule-content p {
+    margin: 0;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.rule-content strong {
+    color: #526457;
+    font-weight: 700;
+}
+
+/* Pengingat peraturan */
+
+.rules-reminder {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #f5f8f4;
+    color: #7c877e;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.rules-reminder i {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #426b50;
+}
+
+/* Daftar layanan: ikon dan teks horizontal */
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 21px 0;
+    border-bottom: 1px solid #eef1ed;
+}
+
+.service-item:first-child {
+    padding-top: 0;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-icon {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    font-size: 19px;
+}
+
+.service-laundry {
+    background: #eaf4ec;
+    color: #426b50;
+}
+
+.service-manager {
+    background: #eaf2fb;
+    color: #3974ad;
+}
+
+.service-room {
+    background: #fff2e5;
+    color: #d98935;
+}
+
+.service-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.service-content h4 {
+    margin: 0 0 6px;
+    color: #2d3d32;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.service-content p {
+    margin: 0 0 5px;
+    color: #858d87;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.service-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #3974ad;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.service-contact:hover {
+    color: #285887;
+    text-decoration: underline;
+}
+
+/* Tombol WhatsApp */
+
+.service-action {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eaf6ed;
+    color: #278448;
+    font-size: 17px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.service-action:hover {
+    transform: translateY(-2px);
+    background: #d9efdf;
+    color: #206d3a;
+}
+
+/* Catatan bantuan */
+
+.services-help-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 17px;
+    padding: 16px;
+    border-radius: 13px;
+    background: #f3f7fb;
+}
+
+.services-help-note > i {
+    margin-top: 2px;
+    color: #3974ad;
+    font-size: 18px;
+}
+
+.services-help-note h4 {
+    margin: 0 0 6px;
+    color: #344b60;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.services-help-note p {
+    margin: 0;
+    color: #818d98;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .rules-services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* HP */
+
+@media (max-width: 480px) {
+    .rules-services-section {
+        margin-top: 34px;
+    }
+
+    .rules-services-heading h2 {
+        font-size: 21px;
+    }
+
+    .rules-services-heading > p {
+        font-size: 12px;
+    }
+
+    .rules-card,
+    .services-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .rules-card-header h3,
+    .services-card-header h3 {
+        font-size: 15px;
+    }
+
+    .rule-item {
+        gap: 12px;
+    }
+
+    .rule-content p {
+        font-size: 11px;
+    }
+
+    .service-item {
+        gap: 10px;
+    }
+
+    .service-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .service-action {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+/* ==============================
+   FAQ - PERTANYAAN UMUM
+============================== */
+
+.faq-section {
+    max-width: 900px;
+    margin: 55px auto 45px;
+}
+
+.faq-heading {
+    margin-bottom: 27px;
+}
+
+.faq-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #3974ad;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.faq-heading h2 {
+    margin: 0 0 11px;
+    color: #24352a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.45;
+}
+
+.faq-heading > p {
+    max-width: 650px;
+    margin: 0;
+    color: #858d87;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Daftar accordion */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    overflow: hidden;
+    border: 1px solid #e5e9e5;
+    border-radius: 13px;
+    background: #ffffff;
+    transition: border-color 0.2s ease;
+}
+
+.faq-item:hover {
+    border-color: #cbd9ce;
+}
+
+/* Pertanyaan */
+
+.faq-question {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 20px 22px;
+    border: none;
+    background: #ffffff;
+    color: #2d3d32;
+    text-align: left;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.faq-question:focus-visible {
+    outline: 2px solid #3974ad;
+    outline-offset: -3px;
+}
+
+/* Ikon plus dan minus */
+
+.faq-toggle {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e9e5;
+    border-radius: 9px;
+    color: #3974ad;
+    font-size: 13px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+    border-color: #dce8f5;
+    background: #edf4fb;
+}
+
+/* Jawaban */
+
+.faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+}
+
+.faq-answer p {
+    overflow: hidden;
+    min-height: 0;
+    margin: 0;
+    padding: 0 22px;
+    color: #858d87;
+    font-size: 12px;
+    line-height: 1.9;
+    opacity: 0;
+    transition: opacity 0.2s ease, padding 0.25s ease;
+}
+
+.faq-item.active .faq-answer {
+    grid-template-rows: 1fr;
+}
+
+.faq-item.active .faq-answer p {
+    padding: 0 22px 21px;
+    opacity: 1;
+}
+
+/* Responsif */
+
+@media (max-width: 768px) {
+    .faq-section {
+        margin-top: 40px;
+    }
+
+    .faq-heading h2 {
+        font-size: 23px;
+    }
+
+    .faq-question {
+        padding: 17px 18px;
+        font-size: 12px;
+    }
+
+    .faq-item.active .faq-answer p {
+        padding: 0 18px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-heading h2 {
+        font-size: 21px;
+    }
+
+    .faq-heading > p {
+        font-size: 12px;
+    }
+
+    .faq-list {
+        gap: 10px;
+    }
+
+    .faq-question {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .faq-toggle {
+        width: 28px;
+        height: 28px;
+    }
+
+    .faq-answer p {
+        font-size: 11px;
+    }
+
+    .faq-item.active .faq-answer p {
+        padding: 0 15px 16px;
+    }
+}
+
+
+
+/* ==============================
+   CTA - TEMUKAN KOST
+============================== */
+
+.kost-cta-section {
+    margin-top: 48px;
+    margin-bottom: 45px;
+}
+
+.kost-cta-card {
+    position: relative;
+    display: flex;
+    min-height: 255px;
+    align-items: center;
+    overflow: hidden;
+    padding: 42px 44px;
+    border-radius: 22px;
+    background: #3974ad;
+}
+
+/* Konten utama */
+
+.kost-cta-content {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    max-width: 700px;
+}
+
+.kost-cta-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 17px;
+    color: #d8e8f8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.kost-cta-eyebrow i {
+    font-size: 14px;
+}
+
+.kost-cta-content h2 {
+    max-width: 580px;
+    margin: 0 0 13px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: -0.8px;
+}
+
+.kost-cta-content > p {
+    max-width: 550px;
+    margin: 0;
+    color: #d4e0ed;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Tombol horizontal */
+
+.kost-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.kost-cta-button {
+    display: inline-flex;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 17px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.kost-cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.kost-cta-button.primary {
+    background: #ffffff;
+    color: #2e6192;
+}
+
+.kost-cta-button.primary:hover {
+    background: #edf4fb;
+    color: #244f78;
+}
+
+.kost-cta-button.secondary {
+    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.kost-cta-button.secondary:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+/* Dekorasi sisi kanan */
+
+.kost-cta-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.kost-cta-circle {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+}
+
+.kost-cta-decoration .circle-one {
+    top: 50%;
+    right: -55px;
+    width: 270px;
+    height: 270px;
+    transform: translateY(-50%);
+}
+
+.kost-cta-decoration .circle-two {
+    top: 50%;
+    right: -15px;
+    width: 190px;
+    height: 190px;
+    transform: translateY(-50%);
+}
+
+.kost-cta-house-icon {
+    position: absolute;
+    top: 50%;
+    right: 65px;
+    color: rgba(255, 255, 255, 0.19);
+    font-size: 100px;
+    transform: translateY(-50%);
+}
+
+.kost-cta-stars {
+    position: absolute;
+    top: 35%;
+    right: 45px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 25px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .kost-cta-card {
+        min-height: auto;
+        padding: 32px;
+    }
+
+    .kost-cta-content {
+        width: 88%;
+    }
+
+    .kost-cta-content h2 {
+        font-size: 24px;
+    }
+
+    .kost-cta-decoration {
+        width: 25%;
+        opacity: 0.65;
+    }
+
+    .kost-cta-house-icon {
+        right: 15px;
+        font-size: 75px;
+    }
+
+    .kost-cta-decoration .circle-one {
+        right: -100px;
+    }
+
+    .kost-cta-decoration .circle-two {
+        right: -65px;
+    }
+}
+
+/* HP */
+
+@media (max-width: 480px) {
+    .kost-cta-section {
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
+
+    .kost-cta-card {
+        padding: 26px 22px;
+        border-radius: 17px;
+    }
+
+    .kost-cta-content {
+        width: 100%;
+    }
+
+    .kost-cta-eyebrow {
+        margin-bottom: 13px;
+        font-size: 9px;
+    }
+
+    .kost-cta-content h2 {
+        max-width: 310px;
+        font-size: 22px;
+    }
+
+    .kost-cta-content > p {
+        font-size: 12px;
+    }
+
+    .kost-cta-actions {
+        align-items: stretch;
+        gap: 10px;
+        margin-top: 21px;
+    }
+
+    .kost-cta-button {
+        width: 100%;
+        min-height: 44px;
+        padding: 12px;
+        font-size: 11px;
+    }
+
+    .kost-cta-decoration {
+        width: 100%;
+        opacity: 0.35;
+    }
+
+    .kost-cta-house-icon {
+        top: 15px;
+        right: 10px;
+        font-size: 55px;
+        transform: none;
+    }
+
+    .kost-cta-decoration .circle-one {
+        top: 15px;
+        right: -120px;
+        width: 180px;
+        height: 180px;
+        transform: none;
+    }
+
+    .kost-cta-decoration .circle-two {
+        top: 35px;
+        right: -85px;
+        width: 130px;
+        height: 130px;
+        transform: none;
+    }
+
+    .kost-cta-stars {
+        top: 22px;
+        right: 75px;
+        font-size: 18px;
+    }
+}
